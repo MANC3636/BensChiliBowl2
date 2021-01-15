@@ -1,3 +1,4 @@
+
 import pygame as pg
 from settings import *
 
@@ -35,16 +36,6 @@ class Employee(Player):
         self.groups=game.all_sprites
         super(Employee, self).__init__(game, x,y)
 
-
-
-
-
-
-
-
-
-
-
 class Wall(pg.sprite.Sprite):
     def __init__(self, game, x, y):
         self.groups = game.all_sprites, game.walls
@@ -71,4 +62,5 @@ class Table(pg.sprite.Sprite):
         self.y = y
         self.rect.x = x * TILESIZE
         self.rect.y = y * TILESIZE
+
 
