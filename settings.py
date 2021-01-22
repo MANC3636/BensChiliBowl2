@@ -1,4 +1,4 @@
-
+import pygame as pg
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 DARKGREY = (40, 40, 40)
@@ -38,3 +38,6 @@ TILESIZE = 32
 GRIDWIDTH = WIDTH / TILESIZE
 
 GRIDHEIGHT = HEIGHT / TILESIZE
+
+#assets
+ersatz_menu=pg.image.load("menu2.png")#this is a surface object; no rect needed
