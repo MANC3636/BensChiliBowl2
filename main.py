@@ -24,7 +24,7 @@ class Game:
             for line in f:
                 self.map_data.append(line)
 
-    def text_box(self, text, x, y):
+    def text_box(self, text, x, y):#--------------------------->this func is new
         self.font=pg.font.SysFont("arial",20)
         self.text_surface=self.font.render(text, True, (20,100,100))
         self.text_rect=self.text_surface.get_rect(center=(x,y))
@@ -36,7 +36,7 @@ class Game:
         self.walls = pg.sprite.Group()
         self.floors=pg.sprite.Group()
         self.tables=pg.sprite.Group()
-        self.menu=Menu(self, WIDTH-96,96)
+        self.menu=Menu(self, WIDTH-96,96)#-------------------------->this call is new 
 
 
         for row, tiles in enumerate(self.map_data):
@@ -75,7 +75,7 @@ class Game:
             pg.draw.line(self.screen, LIGHTGREY, (x, 0), (x, HEIGHT))
         for y in range(0, HEIGHT, TILESIZE):
             pg.draw.line(self.screen, LIGHTGREY, (0, y), (WIDTH, y))
-        self.text_box("Need's fixing", 78, 160)
+        self.text_box("Need's fixing", 78, 160)#------------------->also new
 
     def draw(self):#part of blit results
         self.screen.fill(BGCOLOR)
