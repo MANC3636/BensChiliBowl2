@@ -55,7 +55,7 @@ class Table(pg.sprite.Sprite):
         self.rect.x = x * TILESIZE
         self.rect.y = y * TILESIZE
 
-class Menu(pg.sprite.Sprite):
+class Menu(pg.sprite.Sprite):#------------------------------->new class; notice is has no methods/funcs
     def __init__(self, game, x, y):
         self.groups = game.all_sprites
         pg.sprite.Sprite.__init__(self, self.groups)
